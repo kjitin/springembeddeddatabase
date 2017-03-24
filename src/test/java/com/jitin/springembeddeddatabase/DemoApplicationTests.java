@@ -12,12 +12,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.List;
 import java.util.Map;
 
+@TestEnvironment
 @RunWith(SpringRunner.class)
-@SqlGroup({
-		@Sql(executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD,scripts = "classpath:beforeTestRun.sql"),
-		@Sql(executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD,scripts = "classpath:afterTestRun.sql")
-})
-@SpringBootTest
 public class DemoApplicationTests {
 
 	@Autowired
